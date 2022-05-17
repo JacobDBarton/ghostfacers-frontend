@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
 
-function Header(props) {
+
+
+function Nav(props) {
     return (
         <nav className="nav">
+            <div>
+            <button>Create a spooky list</button>
             <Link to="/">
-                <div>Home</div>  
+                <div>Home</div>
                 <div>Sign In</div>
                 <div>Sign Up</div>
             </Link>
-            <button>Create a spooky list</button>
+            </div>
 
         </nav>
     );
 }
 
-export default Header;
+
+export default Nav;
