@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 function CarouselComponent(props) {
-  const url = "our API";
+  const url = "our API?";
 
   const [scaryInfo, setScaryInfo] = useState([]);
 
