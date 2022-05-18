@@ -16,7 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<LandingPage />}>
           <Route index element={<CreateListPage />} />
-          <Route path="/ships/:id" element={<ShowPage />} />
+          <Route path="/list/:id" element={<ShowPage />} />
         </Route>
       </Routes>
     </Router>
