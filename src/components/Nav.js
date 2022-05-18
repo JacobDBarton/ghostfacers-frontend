@@ -1,23 +1,20 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-
-
-function Nav(props) {
-    return (
-        <nav className="nav">
-            <>
-            <Link to="/">
-                <div>Home</div>
-            </Link>
-            <Link to="./components/auth/signIn">
-                <div>Sign In</div> 
-            </Link>
-            <Link to="./components/auth/signUp">
-                <div>Sign Up</div>
-            </Link>
-            </>
-        </nav>
-    );
-}
+const Nav = (props) => {
+  return (
+    <div className="nav">
+      <Link className="nav-link" to="/">
+        <div>Home</div>
+      </Link>
+      {/* <Link className="nav-link" to="/auth/signIn">
+        <div>Sign In</div>
+      </Link>
+      <Link className="nav-link" to="/auth/signUp">
+        <div>Sign Up</div>
+      </Link> */}
+    </div>
+  );
+};
 
 export default Nav;
