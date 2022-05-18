@@ -1,22 +1,24 @@
+import "./styles.scss";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles.scss";
+import Nav from "./components/Nav";
+import App from "./components/App";
 import LandingPage from "./LandingPage";
+import ShowPage from "./components/ShowPage";
+import Review from "./components/Review";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import CreateListPage from "./components/CreateListPage";
-import ShowPage from "./components/ShowPage";
-import Nav from "./components/Nav";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
-        <Route path="/" element={<LandingPage />}>
-          <Route index element={<CreateListPage />} />
-          <Route path="/list/:id" element={<ShowPage />} />
+        <Route path="/" element={<App />}>
+          <Route index element={<LandingPage />} />
+          <Route path="/Review" element={<Review />} />
+          <Route path="/Review/:id" element={<ShowPage />} />
         </Route>
       </Routes>
     </Router>
