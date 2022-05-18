@@ -1,11 +1,16 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom';
+import LandingPage from '../LandingPage';
 
 function App() {
   return (
     <div>
-        <h1>Why DO we need this? That is THE question!</h1>
-        <Outlet/>
+        <div> 
+            <Outlet/>
+        </div>
+        <div>
+            <LandingPage/>
+        </div>
     </div>
   )
 }

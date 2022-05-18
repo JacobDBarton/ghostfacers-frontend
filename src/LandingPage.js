@@ -3,22 +3,6 @@ import Nav from "./components/Nav";
 import Search from "./components/Search";
 import CarouselComponent from "./components/carousel.component";
 import "bootstrap/dist/css/bootstrap.css";
-// import Icon from "react-crud-icons";
-
-// import "../node_modules/react-crud-icons/dist/react-crud-icons.css";
-
-// class Example extends React.Component {
-//   render() {
-//     return (
-//       <Icon
-//         name = "search"
-//         theme = "dark"
-//         size = "small"
-//         // onClick = { doSomething }
-//       />
-//     );
-//   }
-// }
 
 
 const Home = {
