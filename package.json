@@ -13,6 +13,7 @@
     "mongoose": "^6.3.3",
     "morgan": "^1.10.0",
     "react": "^18.1.0",
+    "react-crud-icons": "^1.1.0",
     "react-dom": "^18.1.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",

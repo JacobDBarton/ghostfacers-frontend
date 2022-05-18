@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+
 function CarouselComponent(props) {
   const url = "our API???";
 
@@ -28,8 +30,13 @@ function CarouselComponent(props) {
           autoPlay
           stopOnHover={true}
           showStatus={false}
-          interval={6000}
+          interval={3000}
           showThumbs={false}
+          swipable={true}
+          emulateTouch={true}
+          centerMode={true}
+          centerSlidePercentage={40}
+          // onCLick{Function} to route to show page of carousel haunted list
         >
           {scaryInfo.map((image, index) => {
             return (
