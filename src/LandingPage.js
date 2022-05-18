@@ -2,6 +2,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Search from "./components/Search";
 import CarouselComponent from "./components/carousel.component";
+import "bootstrap/dist/css/bootstrap.css";
 
 const Home = {
   backgroundColor: "gray",
