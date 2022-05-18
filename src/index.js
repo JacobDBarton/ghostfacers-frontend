@@ -1,14 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.scss";
-import App from "./LandingPage";
+import LandingPage from "./LandingPage";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import CreateListPage from "./components/CreateListPage";
+import ShowPage from "./components/ShowPage";
+import Nav from "./components/Nav";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Router>
+  <React.StrictMode>
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<LandingPage />}>
+          <Route index element={<CreateListPage />} />
+          <Route path="/ships/:id" element={<ShowPage />} />
+        </Route>
+      </Routes>
+    </Router>
+  </React.StrictMode>
 );
