@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Review from "./Review";
+import Review from "../components/Review";
 
 function Show() {
   const [location, setLocation] = useState(null);
@@ -29,7 +29,13 @@ function Show() {
     <div className="location">
       <h1>{location.location}</h1>
       <p>{location.description}</p>
-      <img src={location.image} alt={location.name} className="location-img" />
+      {location.image && (
+        <img
+          src={location.image}
+          alt={location.name}
+          className="location-img"
+        />
+      )}
       <Review locationId={location._id} />
     </div>
   );
