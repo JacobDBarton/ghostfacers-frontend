@@ -1,22 +1,23 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-
-
-function Nav(props) {
-    return (
-        <nav className="nav">
-            <div>
-            <button>Create a spooky list</button>
-            <Link to="/">
-                <div>Home</div>
-                <div>Sign In</div>
-                <div>Sign Up</div>
-            </Link>
-            </div>
-
-        </nav>
-    );
-}
-
+const Nav = (props) => {
+  return (
+    <div className="nav">
+      <Link className="nav-link" to="/">
+        <div>Home</div>
+      </Link>
+      <Link className="nav-link" to="/Search">
+        <div>Search For a Haunted Site</div>
+      </Link>
+      {/* <Link className="nav-link" to="/auth/signIn">
+        <div>Sign In</div>
+      </Link>
+      <Link className="nav-link" to="/auth/signUp">
+        <div>Sign Up</div>
+      </Link> */}
+    </div>
+  );
+};
 
 export default Nav;
