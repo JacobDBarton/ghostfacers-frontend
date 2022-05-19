@@ -8,7 +8,7 @@ const Nav = (props) => {
         <div>Home</div>
       </Link>
       <Link className="nav-link" to="/Search">
-        <div>Search for a Haunted Location!</div>
+        <div>Search For a Haunted Site</div>
       </Link>
       {/* <Link className="nav-link" to="/auth/signIn">
         <div>Sign In</div>
