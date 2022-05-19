@@ -39,6 +39,7 @@ function Review(props) {
   if (!hasReview && !editing)
     return (
       <div>
+        <h2>Have you visited? Had a supernatural experience?  </h2>
         <button onClick={() => setEditing(true)}>Add Review</button>
       </div>
     );

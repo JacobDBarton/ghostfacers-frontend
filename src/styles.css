@@ -1,8 +1,48 @@
+*{
+  font-family: 'Eczar', serif;
+  background-color: rgba(0, 0, 0, 0.872);
+  color: rgba(220, 232, 255, 0.776);
+}
+
+body {
+  background-color: bisque;
+}
+
+.main {
+  color: whitesmoke;
+}
+
+.paragraph {
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content:right;
+  font-size: 3vh;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
+.featured-img {
+  display: block;
+}
+
+.featured-img img {
+  object-fit: cover;
+  height: 500px;
+  width: 50px;
+}
+
+.location-img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,20 +75,6 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
-.featured-img {
-  display: block;
-}
 
-.featured-img img {
-  object-fit: cover;
-  height: 300px;
-  width: 50px;
-}
-
-.location-img {
-  width: 500px;
-  height: 300px;
-  object-fit: cover;
-}

@@ -27,7 +27,6 @@ function Show() {
 
   return (
     <div className="location">
-      <h1>Show Page</h1>
       <h2>{location.location}</h2>
       <p>{location.description}</p>
       <img src={location.image} alt={location.name} className="location-img" />
