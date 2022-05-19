@@ -8,11 +8,16 @@ body {
   background-color: bisque;
 }
 
+
 .main {
   color: whitesmoke;
 }
 
 .paragraph {
+  text-align: center;
+}
+
+.location {
   text-align: center;
 }
 

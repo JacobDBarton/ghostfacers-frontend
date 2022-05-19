@@ -27,7 +27,7 @@ function Show() {
 
   return (
     <div className="location">
-      <h2>{location.location}</h2>
+      <h1>{location.location}</h1>
       <p>{location.description}</p>
       <img src={location.image} alt={location.name} className="location-img" />
       <Review locationId={location._id} />
