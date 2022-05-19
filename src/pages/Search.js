@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlassLocation } from '@fortawesome/free-solid-svg-icons';
+// import {} from 'fontawesome/free-brands-svg-icons';
 
 function Search() {
   const [city, setCity] = useState("");
@@ -26,8 +29,9 @@ function Search() {
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city..."
+        placeholder="Enter location"
       />
+      <FontAwesomeIcon icon={faMagnifyingGlassLocation}></FontAwesomeIcon>
       {search &&
         search.map((result) => (
           <Link to={`/location/${result._id}`} key={result._id}>
