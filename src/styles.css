@@ -1,12 +1,13 @@
 *{
   font-family: 'Eczar', serif;
   background-color: rgba(0, 0, 0, 0.872);
+  background-size: cover ;
   color: rgba(220, 232, 255, 0.776);
 }
 
-body {
+/* body {
   background-color: bisque;
-}
+} */
 
 
 .main {
@@ -23,7 +24,8 @@ body {
 
 .nav {
   display: flex;
-  justify-content:right;
+  justify-content:space-between;
+  /* background-color: orange; */
   font-size: 3vh;
 }
 
