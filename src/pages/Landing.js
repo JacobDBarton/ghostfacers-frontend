@@ -15,6 +15,10 @@ const Landing = () => {
   }, []);
   return (
     <>
+    <div className="paragraph">
+        <h2>Places that are haunted are usually believed to be associated with some occurrence or emotion in the ghost's past; they are often a former home or the place where he or she died. Aside from actual ghostly apparitions, traditional signs of haunting range from strange noises, lights, odors or breezes to the displacement of objects, bells that ring spontaneously or musical instruments that seem to play on their own.</h2>
+        {/* https://www.history.com/topics/halloween/historical-ghost-stories */}
+    </div>
       <h2>
         Here at Ghostfacers, you can get details of America's most Haunted
         locations! Search cities to find the lingering spirits that roam around
