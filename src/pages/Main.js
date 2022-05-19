@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
+import Search from "../components/Search";
 
 const Main = (props) => {
   console.log("here");
