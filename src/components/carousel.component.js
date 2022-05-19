@@ -4,23 +4,23 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 function CarouselComponent(props) {
-  const url = "our API???";
+  // const url = "our API???";
 
   const [scaryInfo, setScaryInfo] = useState([]);
 
-  useEffect(() => {
-    const getScaryInfo = async () => {
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setScaryInfo(data);
-      } catch (err) {
-        console.log("hellllp");
-      }
-    };
+  // useEffect(() => {
+  //   const getScaryInfo = async () => {
+  //     try {
+  //       const response = await fetch(url);
+  //       const data = await response.json();
+  //       setScaryInfo(data);
+  //     } catch (err) {
+  //       console.log("hellllp");
+  //     }
+  //   };
 
-    getScaryInfo();
-  }, []);
+  //   getScaryInfo();
+  // }, []);
 
   function loaded() {
     return (
