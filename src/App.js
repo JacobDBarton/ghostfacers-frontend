@@ -1,22 +1,12 @@
-import "./styles.css";
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-
-//Pages
-import Main from "./pages/Main";
-import Landing from "./pages/Landing";
-import Search from "./pages/Search";
-import ShowPage from "./pages/ShowPage";
+import { Outlet } from "react-router-dom";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Main />}>
-        <Route index element={<Landing />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/location/:id" element={<ShowPage />} />
-      </Route>
-    </Routes>
+  <section className="main-page">
+    <Nav />
+    <Outlet />
+  </section>
   );
 }
 export default App;
