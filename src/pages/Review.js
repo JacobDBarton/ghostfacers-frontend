@@ -58,9 +58,9 @@ function Review(props) {
             }
           />
           <input
-            type="image alt"
+            type="img alt"
             value={review.image}
-            name="description"
+            name="image"
             placeholder="Add an image URL..."
             onChange={(evt) =>
               setReview((review) => ({ ...review, image: evt.target.value }))
