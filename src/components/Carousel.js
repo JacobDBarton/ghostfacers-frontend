@@ -27,9 +27,9 @@ function CarouselComponent(props) {
                 key={index}
                 className="featured-img"
               >
+                <h3 dangerouslySetInnerHTML={{ __html: location.location }} />
                 <img src={location.image} alt={location.location} />
                 {/* the data set had encoded characters for ampersands, so we used dangerouslySetInnerHTML to render it as HTML  */}
-                <h3 dangerouslySetInnerHTML={{ __html: location.location }} />
               </Link>
             );
           })}
