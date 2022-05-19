@@ -36,10 +36,16 @@ function Review(props) {
     postReview();
   };
 
+  const handleDelete = async () => {
+    await axios.delete(
+      `https://haunted-site-app.herokuapp.com/reviews/${props.locationId}`
+    );
+  };
+
   if (!hasReview && !editing)
     return (
       <div>
-        <h2>Have you visited? Had a supernatural experience?  </h2>
+        <h2>Have you visited? Had a supernatural experience? </h2>
         <button onClick={() => setEditing(true)}>Add Review</button>
       </div>
     );
@@ -55,15 +61,6 @@ function Review(props) {
             placeholder="Enter a comment..."
             onChange={(evt) =>
               setReview((review) => ({ ...review, comment: evt.target.value }))
-            }
-          />
-          <input
-            type="image alt"
-            value={review.image}
-            name="description"
-            placeholder="Add an image URL..."
-            onChange={(evt) =>
-              setReview((review) => ({ ...review, image: evt.target.value }))
             }
           />
           <input
@@ -90,6 +87,7 @@ function Review(props) {
         <h2>{review.comment}</h2>
         <h3>{review.hauntedRating}</h3>
         <button onClick={() => setEditing(true)}>Edit Review</button>
+        <button onClick={() => handleDelete()}>Delete Review</button>
       </div>
     );
   }
