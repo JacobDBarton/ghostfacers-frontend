@@ -1,23 +1,27 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import 'bootstrap'
-import { Navbar, NavItem, NavLink} from "react-bootstrap"
+import { Navbar, Nav as RBNav, Container } from "react-bootstrap";
+import Search from "./Search";
 
-
-const Nav = (props) => {
-  return (
-    <div className="nav">
-      <Link className="nav-link" to="/">
-        <div>Home</div>
-      </Link>
-      {/* <Link className="nav-link" to="/auth/signIn">
-        <div>Sign In</div>
-      </Link>
-      <Link className="nav-link" to="/auth/signUp">
-        <div>Sign Up</div>
-      </Link> */}
-    </div>
-  );
-};
+const Nav = (props) => (
+  <Navbar bg="dark" variant="dark">
+    <Container>
+      <Navbar.Brand as={Link} to="/">
+        <img
+          alt=""
+          src="https://www.nicepng.com/png/full/134-1346135_supernatural-ghostfacers-logo.png"
+          width="159"
+          height="30"
+          className="d-inline-block align-top"
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="navbar-nav" />
+      <Navbar.Collapse id="navbar-nav" className="justify-content-end">
+        <RBNav>
+          <Search />
+        </RBNav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+);
 
 export default Nav;

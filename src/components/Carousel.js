@@ -1,44 +1,44 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
+import { Carousel, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-function CarouselComponent(props) {
+const CarouselComponent = (props) => {
+  if (!props.locations) {
+    return (
+      <h3>Loading locations...</h3>
+    );
+  }
   return (
-    <>
-      {props.locations ? (
-        <Carousel
-          infiniteLoop
-          autoPlay
-          stopOnHover={true}
-          showStatus={false}
-          interval={3000}
-          showThumbs={false}
-          swipable={true}
-          emulateTouch={true}
-          centerMode={true}
-          centerSlidePercentage={40}
-          // onCLick{Function} to route to show page of carousel haunted list
-        >
-          {props.locations.map((location, index) => {
-            return (
-              <Link
-                to={`/location/${location._id}`}
-                key={index}
-                className="featured-img"
-              >
-                 {/* the data set had encoded characters for ampersands, so we used dangerouslySetInnerHTML to render it as HTML  */}
-                 <h3 dangerouslySetInnerHTML={{ __html: location.location }} />
-                <img src={location.image} alt={location.location} />
-              </Link>
-            );
-          })}
-        </Carousel>
-      ) : (
-        <h3>Loading data...</h3>
-      )}
-    </>
+    <Carousel interval={3000}>
+      {props.locations.map((location, index) => {
+        // loop through all of the locations and render a carousel item for each one
+        // with an image and caption
+        return (
+          <Carousel.Item
+            // use the location id as the key
+            key={location._id}
+            // we need to render each item as a Link so that we can navigate to the show page (with the `to` prop)
+            as={Link}
+            to={`/location/${location._id}`}
+          >
+            <Image
+              className="d-block carousel-img"
+              src={location.image}
+              alt={location.location}
+            />
+            <Carousel.Caption>
+              {/* the data set had encoded characters for ampersands, so we used dangerouslySetInnerHTML to render it as HTML  */}
+              <h5 dangerouslySetInnerHTML={{ __html: location.location }} />
+              <p>
+                {location.city}, {location.state_abbrev}
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        );
+      })}
+    </Carousel>
   );
-}
+};
 
 export default CarouselComponent;

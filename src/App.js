@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
+import { Container } from "react-bootstrap"
 import Nav from "./components/Nav";
 
 function App() {
   return (
-  <section className="main-page">
-    <Nav />
-    <Outlet />
-  </section>
+    <Container bg="dark">
+      <Nav />
+      <Outlet />
+    </Container>
   );
 }
 export default App;

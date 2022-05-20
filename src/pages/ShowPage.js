@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Container } from "react-bootstrap"
 import axios from "axios";
 import Review from "../components/Review";
 
@@ -26,9 +27,9 @@ function Show() {
   if (!location) return null;
 
   return (
-    <div className="location">
-      <h1>{location.location}</h1>
-      <p>{location.description}</p>
+    <Container className="location">
+      <h1 className="text-light">{location.location}</h1>
+      <p className="text-light">{location.description}</p>
       {location.image && (
         <img
           src={location.image}
@@ -37,7 +38,7 @@ function Show() {
         />
       )}
       <Review locationId={location._id} />
-    </div>
+    </Container>
   );
 }
 
