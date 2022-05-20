@@ -1,4 +1,4 @@
-import './styles.css';
+import '../styles.css';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 
