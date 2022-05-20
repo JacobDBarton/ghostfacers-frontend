@@ -50,7 +50,8 @@
 .footer {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  gap: 20px;
+  align-items: center;
   margin: auto;
   margin-top: 50px;
 }
