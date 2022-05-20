@@ -67,6 +67,7 @@ FlexBox
 ## Future Improvements
 Giving users the option to add to our database of locations if they have found others not in our list.
 Finding an API with images we can use to show with all of our locations when searched. 
+Adjusting the footer so that it renders consistently on every page.
 
 ## Contribution Guidelines
 If you run into any bugs feel free to submit an issue/request on our Github and we will look into getting that resolved!  
