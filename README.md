@@ -10,9 +10,9 @@ Ghostfacers is a haunted site tracker that pulls haunted site data from location
 
 ### References
 
-https://stackoverflow.com/questions/26814456/how-to-get-all-the-values-that-contains-part-of-a-string-using-mongoose-find
-https://reactrouter.com/docs/en/v6/hooks/use-navigate
-https://shripadk.github.io/react/docs/jsx-gotchas.html
-https://mongoosejs.com/docs/schematypes.html#numbers
-https://www.positronx.io/react-responsive-carousel-tutorial/
-https://github.com/leandrowd/react-responsive-carousel
+- https://stackoverflow.com/questions/26814456/how-to-get-all-the-values-that-contains-part-of-a-string-using-mongoose-find
+- https://reactrouter.com/docs/en/v6/hooks/use-navigate
+- https://shripadk.github.io/react/docs/jsx-gotchas.html
+- https://mongoosejs.com/docs/schematypes.html#numbers
+- https://www.positronx.io/react-responsive-carousel-tutorial/
+- https://github.com/leandrowd/react-responsive-carousel
