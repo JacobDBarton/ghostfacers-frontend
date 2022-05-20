@@ -20,29 +20,15 @@
   margin: auto;
 }
 
-.main {
-  color: whitesmoke;
-}
-
 .paragraph {
   font-size: small;
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 4.5vh;
 }
 
 .location {
   text-align: center;
   height: 100vh;
-}
-
-.nav {
-  display: flex;
-  justify-content:space-between;
-  font-size: 3vh;
-}
-
-.App {
-  text-align: center;
 }
 
 .featured-img {
@@ -82,4 +68,8 @@ a {
   display: flex;
   justify-content: center;
   color: white;
+}
+
+.popover-header {
+  background-color:#9A3939 ;
 }
