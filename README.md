@@ -17,9 +17,9 @@ We selected a Top 10 Haunted locations based on places we found were the spookie
 We could not find an API to bring data into our site. However, we were able to find a file with information we could use and imported the data into a database we created in MongoDB. That database was then deployed to Heroku for us to use as our API. 
 ![MongoDB ScreenShot](https://user-images.githubusercontent.com/101548840/169458027-8b6c62a1-d33c-4189-a3da-0233d72b860d.png)
 
-###Original Data
+### Original Data
 https://data.world/timothyrenner/haunted-places/workspace/file?filename=haunted_places.csv
-###Our Heroku API with mported Data from MongoDB
+### Our Heroku API with mported Data from MongoDB
 https://haunted-site-app.herokuapp.com
 
 
