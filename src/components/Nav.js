@@ -7,10 +7,10 @@ const Nav = (props) => (
     <Container>
       <Navbar.Brand as={Link} to="/">
         <img
-          alt=""
+          alt="ghostfacer logo"
           src="https://www.nicepng.com/png/full/134-1346135_supernatural-ghostfacers-logo.png"
-          width="159"
-          height="30"
+          width="250"
+          height="48"
           className="d-inline-block align-top"
         />
       </Navbar.Brand>

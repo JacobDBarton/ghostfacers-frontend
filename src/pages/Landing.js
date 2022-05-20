@@ -16,8 +16,8 @@ const Landing = () => {
   }, []);
 
   return (
-    <>
-      <p className="text-light">
+    <div className="paragraph">
+      <p>
         Places that are haunted are usually believed to be associated with some
         occurrence or emotion in the ghost's past; they are often a former home
         or the place where he or she died. Aside from actual ghostly
@@ -26,14 +26,14 @@ const Landing = () => {
         spontaneously or musical instruments that seem to play on their own.
         {/* https://www.history.com/topics/halloween/historical-ghost-stories */}
       </p>
-      <p className="text-light">
+      <p>
         Here at Ghostfacers, you can get details of America's most Haunted
         locations! Search cities to find the lingering spirits that roam around
         hotels, prisons, asylums, or abandoned buildings. If you've been there
         please tell us about your experience!{" "}
       </p>
       <Carousel locations={featured} />
-    </>
+    </div>
   );
 };
 
