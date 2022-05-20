@@ -23,7 +23,7 @@
 .paragraph {
   font-size: small;
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 4.5vh;
 }
 
 .location {
@@ -68,4 +68,8 @@ a {
   display: flex;
   justify-content: center;
   color: white;
+}
+
+.popover-header {
+  background-color:#9A3939 ;
 }
