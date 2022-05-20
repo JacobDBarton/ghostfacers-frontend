@@ -24,21 +24,24 @@ function Search() {
   }, [city]);
 
   return (
-    <>
+    <div className="searchPG">
+      <div className="searchInputDiv">
       <input
+      className="input"
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
         placeholder="Enter location"
       />
       <FontAwesomeIcon icon={faMagnifyingGlassLocation}></FontAwesomeIcon>
+      </div>
       {search &&
         search.map((result) => (
           <Link to={`/location/${result._id}`} key={result._id}>
             {result.location}
           </Link>
         ))}
-    </>
+    </div>
   );
 }
 

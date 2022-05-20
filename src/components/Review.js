@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 
 function Review(props) {
   const [review, setReview] = useState({
-    image: "",
     comment: "",
     hauntedRating: 0,
   });
@@ -17,12 +16,24 @@ function Review(props) {
         `https://haunted-site-app.herokuapp.com/reviews/${props.locationId}`
       );
       if (res.data) {
-        setHasReview(true);
         setReview(res.data);
+        setHasReview(true);
       }
     };
     getReview();
   }, [props.locationId]);
+
+  const handleCommentChange = (event) => {
+
+    const newReviewObj = {comment: event.target.value, hauntedRating: review.hauntedRating};
+    setReview(newReviewObj)
+  }
+
+  const handleReviewChange = (event) => {
+
+    const newReviewObj = {comment: review.comment, hauntedRating: event.target.value};
+    setReview(newReviewObj)
+  }
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -32,6 +43,7 @@ function Review(props) {
         review
       );
       setEditing(false);
+      setHasReview(true);
     };
     postReview();
   };
@@ -40,17 +52,18 @@ function Review(props) {
     await axios.delete(
       `https://haunted-site-app.herokuapp.com/reviews/${props.locationId}`
     );
+    setHasReview(false)
+    setReview({comment: '', hauntedRating: 0})
   };
 
-  if (!hasReview && !editing)
+  if (!hasReview && !editing) {
     return (
       <div>
         <h2>Have you visited? Had a supernatural experience? </h2>
         <button onClick={() => setEditing(true)}>Add Review</button>
       </div>
     );
-
-  if (editing) {
+  } else if (editing) {
     return (
       <section>
         <form onSubmit={handleSubmit}>
@@ -59,9 +72,7 @@ function Review(props) {
             value={review.comment}
             name="description"
             placeholder="Enter a comment..."
-            onChange={(evt) =>
-              setReview((review) => ({ ...review, comment: evt.target.value }))
-            }
+            onChange={handleCommentChange}
           />
           <input
             type="number"
@@ -70,12 +81,7 @@ function Review(props) {
             value={review.hauntedRating}
             name="hauntedRating"
             placeholder="On a scale of 1-5, how scary is this place?"
-            onChange={(evt) =>
-              setReview((review) => ({
-                ...review,
-                hauntedRating: evt.target.value,
-              }))
-            }
+            onChange={handleReviewChange}
           />
           <input type="submit" value="Create Review" />
         </form>
