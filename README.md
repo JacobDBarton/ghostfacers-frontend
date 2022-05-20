@@ -1,6 +1,7 @@
 # Ghostfacers
 
 Ghostfacers is a haunted site tracker that pulls haunted site data from locations all around the United States! Get details of America's most haunted locations, search cities to get details about the lingering spirits that roam around hotels, prisons, asylums, or abandoned buildings. If you've been or know about the haunted location you can also leave a review!
+This site is for those who love ghosts and it's history! 
 
 ## Wireframes
 ### Landing Page
@@ -45,6 +46,20 @@ Clicking on the image will take user to page that will display more information 
 This is a location from out Top 10, this set of locations are the only ones that have images. Our API did not have images and we added some to our database in order to display them on our main page.
 ![Carousel Selected Screenshot](https://user-images.githubusercontent.com/101548840/169467011-46fa4bdd-9ebe-4b20-a0f5-270d03eac976.png)
 
+## Technologies Used
+React
+HTML
+CSS
+JavaScript
+Github
+Heroku
+Netlify
+MongoDB
+React Icons
+
+## Future Improvements
+Giving users the option to add to our database of locations if they have found others not in our list.
+Finding an API with images we can use to show with all of our locations when searched. 
 
 
 
