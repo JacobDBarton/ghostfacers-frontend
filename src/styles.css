@@ -1,7 +1,7 @@
 * {
   font-family: 'Eczar', serif;
   color: rgb(227, 227, 227);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .carousel-img {
@@ -25,7 +25,9 @@
 }
 
 .paragraph {
-  font-size: larger;
+  font-size: medium;
+  text-align: center;
+  margin-top: 5vh;
 }
 
 .location {
@@ -62,6 +64,21 @@
 .footer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: auto;
   margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.Top-title {
+  font-size: 50px;
+}
+
+.creators {
+  display: flex;
+  justify-content: center;
 }

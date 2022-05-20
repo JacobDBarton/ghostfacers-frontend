@@ -32,6 +32,7 @@ const Landing = () => {
         hotels, prisons, asylums, or abandoned buildings. If you've been there
         please tell us about your experience!{" "}
       </p>
+      <p className="Top-title">Top 9 Haunted Locations</p>
       <Carousel locations={featured} />
     </div>
   );
