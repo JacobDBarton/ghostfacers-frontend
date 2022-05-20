@@ -1,7 +1,6 @@
 *{
   font-family: 'Eczar', serif;
   background-color: rgba(0, 0, 0, 0.872);
-  background-size: cover ;
   color: rgba(220, 232, 255, 0.776);
 }
 
@@ -9,6 +8,20 @@
   background-color: bisque;
 } */
 
+.searchPG {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+} 
+
+.searchInputDiv {
+  margin: auto;
+}
+
+.input {
+
+}
 
 .main {
   color: whitesmoke;
@@ -20,6 +33,7 @@
 
 .location {
   text-align: center;
+  height: 100vh;
 }
 
 .nav {

@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import Landing from "./pages/Landing";
-import Search from "./pages/Search";
+import Search from "./components/Search";
 import ShowPage from "./pages/ShowPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Carousel from "../components/Carousel";
+import Search from "../components/Search";
 
 const Landing = () => {
   const [featured, setFeatured] = useState();
@@ -15,6 +16,7 @@ const Landing = () => {
   }, []);
   return (
     <>
+    <Search/>
     <div className="paragraph">
         <h2>Places that are haunted are usually believed to be associated with some occurrence or emotion in the ghost's past; they are often a former home or the place where he or she died. Aside from actual ghostly apparitions, traditional signs of haunting range from strange noises, lights, odors or breezes to the displacement of objects, bells that ring spontaneously or musical instruments that seem to play on their own.</h2>
         {/* https://www.history.com/topics/halloween/historical-ghost-stories */}

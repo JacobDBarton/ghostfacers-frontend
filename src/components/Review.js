@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 
 function Review(props) {
   const [review, setReview] = useState({
-    image: "",
     comment: "",
     hauntedRating: 0,
   });
@@ -17,8 +16,8 @@ function Review(props) {
         `https://haunted-site-app.herokuapp.com/reviews/${props.locationId}`
       );
       if (res.data) {
-        setHasReview(true);
         setReview(res.data);
+        setHasReview(true);
       }
     };
     getReview();
@@ -32,6 +31,8 @@ function Review(props) {
         review
       );
       setEditing(false);
+      setReview(review);
+      setHasReview(true);
     };
     postReview();
   };
@@ -42,15 +43,14 @@ function Review(props) {
     );
   };
 
-  if (!hasReview && !editing)
+  if (!hasReview && !editing) {
     return (
       <div>
         <h2>Have you visited? Had a supernatural experience? </h2>
         <button onClick={() => setEditing(true)}>Add Review</button>
       </div>
     );
-
-  if (editing) {
+  } else if (editing) {
     return (
       <section>
         <form onSubmit={handleSubmit}>
