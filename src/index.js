@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
     <Routes>
-      <Route exact path="/" element={<App />}>
-      <Route index element={<Landing />} />
+      <Route exact path="/" element={<App />} >
+        <Route index element={<Landing />} />
         <Route path="/search" element={<Search />} />
         <Route path="/location/:id" element={<ShowPage />} />
       </Route>

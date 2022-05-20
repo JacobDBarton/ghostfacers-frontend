@@ -1,12 +1,15 @@
-*{
+html {
   font-family: 'Eczar', serif;
-  background-color: rgba(0, 0, 0, 0.872);
-  color: rgba(220, 232, 255, 0.776);
 }
 
 /* body {
   background-color: bisque;
 } */
+
+.carousel-img {
+  height: 400px;
+  object-fit: cover;
+}
 
 .searchPG {
   display: flex;
@@ -17,10 +20,6 @@
 
 .searchInputDiv {
   margin: auto;
-}
-
-.input {
-
 }
 
 .main {
