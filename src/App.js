@@ -3,10 +3,10 @@ import Nav from "./components/Nav";
 
 function App() {
   return (
-    <section className="main-page">
-      <Nav />
-      <Outlet />
-    </section>
+  <section className="main-page">
+    <Nav />
+    <Outlet />
+  </section>
   );
 }
 export default App;

@@ -4,10 +4,24 @@
   color: rgba(220, 232, 255, 0.776);
 }
 
-body {
+/* body {
   background-color: bisque;
+} */
+
+.searchPG {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+} 
+
+.searchInputDiv {
+  margin: auto;
 }
 
+.input {
+
+}
 
 .main {
   color: whitesmoke;
@@ -19,11 +33,13 @@ body {
 
 .location {
   text-align: center;
+  height: 100vh;
 }
 
 .nav {
   display: flex;
-  justify-content:right;
+  justify-content:space-between;
+  /* background-color: orange; */
   font-size: 3vh;
 }
 
