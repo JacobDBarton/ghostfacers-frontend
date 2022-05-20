@@ -6,6 +6,11 @@ Ghostfacers is a haunted site tracker that pulls haunted site data from location
 ### Landing Page
 Holds our Navigation, Search and Featured Locations.  
 By typing into the search bar, a list of options that match that word will show up in a pop-up list. 
+A user can click a result and be taken to the show page, described below.
+### Show Page
+After a user clicks on their selection, the user will be routed to the show page. Here we display the name, location and a description of why the location is haunted.
+### Carousel
+We selected a Top 10 Haunted locations based on places we found were the spookiest to us.
 
 ## API
 We could not find an API to bring data into our site. However, we were able to find a file with information we could use and imported the data into a database we created in MongoDB. That database was then deployed to Heroku for us to use as our API. 
