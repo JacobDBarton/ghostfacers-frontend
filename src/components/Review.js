@@ -63,7 +63,7 @@ const ReviewDisplay = (props) => (
     Inspired by this stack overflow solution: https://stackoverflow.com/a/42306160 */}
     <h3 className="text-light">
       Haunted Rating:{" "}
-      {Array(props.review.hauntedRating)
+      {Array(parseInt(props.review.hauntedRating, 10))
         .fill()
         .map((_, i) => (
           <span key={i}>👻</span>
@@ -104,16 +104,31 @@ function Review(props) {
     getReview();
   }, [props.locationId]);
 
+  const handleCommentChange = (event) => {
+    const newReviewObj = {
+      comment: event.target.value,
+      hauntedRating: review.hauntedRating,
+    };
+    setReview(newReviewObj);
+  };
+
+  const handleReviewChange = (event) => {
+    const newReviewObj = {
+      comment: review.comment,
+      hauntedRating: event.target.value,
+    };
+    setReview(newReviewObj);
+  };
+
   // function that handles adding/updating a review for a location
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const postReview = async () => {
       await axios.post(
         `https://haunted-site-app.herokuapp.com/reviews/${props.locationId}`,
         review
       );
       setEditing(false);
-      setReview(review);
       setHasReview(true);
     };
     postReview();
@@ -124,6 +139,8 @@ function Review(props) {
     await axios.delete(
       `https://haunted-site-app.herokuapp.com/reviews/${props.locationId}`
     );
+    setHasReview(false);
+    setReview({ comment: "", hauntedRating: 0 });
   };
 
   if (!hasReview && !editing) {
@@ -133,18 +150,8 @@ function Review(props) {
       <ReviewForm
         review={review}
         onSubmit={handleSubmit}
-        onCommentChange={(evt) =>
-          setReview((review) => ({
-            ...review,
-            comment: evt.target.value,
-          }))
-        }
-        onHauntedRatingChange={(evt) =>
-          setReview((review) => ({
-            ...review,
-            hauntedRating: evt.target.value,
-          }))
-        }
+        onCommentChange={handleCommentChange}
+        onHauntedRatingChange={handleReviewChange}
       />
     );
   } else {
