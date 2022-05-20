@@ -46,8 +46,13 @@ Clicking on the image will take user to page that will display more information 
 This is a location from out Top 10, this set of locations are the only ones that have images. Our API did not have images and we added some to our database in order to display them on our main page.
 ![Carousel Selected Screenshot](https://user-images.githubusercontent.com/101548840/169467011-46fa4bdd-9ebe-4b20-a0f5-270d03eac976.png)
 
+## Check Our App
+https://ghostfacers.netlify.app
+
 ## Technologies Used
 React
+React Router
+Node
 HTML
 CSS
 JavaScript
@@ -56,12 +61,15 @@ Heroku
 Netlify
 MongoDB
 React Icons
+Bootstrap
+FlexBox
 
 ## Future Improvements
 Giving users the option to add to our database of locations if they have found others not in our list.
 Finding an API with images we can use to show with all of our locations when searched. 
 
-
+## Contribution Guidelines
+If you run into any bugs feel free to submit an issue/request on our Github and we will look into getting that resolved!  
 
 ### References
 
