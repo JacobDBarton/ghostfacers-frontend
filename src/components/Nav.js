@@ -1,29 +1,27 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import 'bootstrap'
-import { Navbar, NavItem, NavLink} from "react-bootstrap"
-
+import { Navbar, Container } from "react-bootstrap"
 
 const Nav = (props) => {
   return (
-    <div className="nav">
-      <Navbar bg='myRed' variant="dark">
-      <Link className="nav-link" to="/">
-        <div>Home</div>
-      </Link>
-      <Link className="nav-link" to="/Search">
-        <div>Search For a Haunted Site</div>
-      </Link>
-      {/* <Link className="nav-link" to="/auth/signIn">
-        <div>Sign In</div>
-      </Link>
-      <Link className="nav-link" to="/auth/signUp">
-        <div>Sign Up</div>
-      </Link> */}
-      <NavItem>
-        </NavItem>
-            </Navbar>
-    </div>
+    <Navbar bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          <img
+            alt=""
+            src="/logo.svg"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/search">Search For a Haunted Site</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
