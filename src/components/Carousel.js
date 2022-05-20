@@ -28,7 +28,6 @@ const CarouselComponent = (props) => {
               alt={location.location}
             />
             <Carousel.Caption>
-              {/* the data set had encoded characters for ampersands, so we used dangerouslySetInnerHTML to render it as HTML  */}
               <h5 dangerouslySetInnerHTML={{ __html: location.location }} />
               <p>
                 {location.city}, {location.state_abbrev}

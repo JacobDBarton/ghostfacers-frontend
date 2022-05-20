@@ -17,7 +17,7 @@ function Show() {
         );
         setLocation(res.data);
       } catch (err) {
-        console.log("error", err);
+        // console.log("error", err);
       }
     };
     getLocation();
