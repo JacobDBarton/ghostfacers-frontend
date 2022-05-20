@@ -17,10 +17,11 @@ We selected a Top 10 Haunted locations based on places we found were the spookie
 We could not find an API to bring data into our site. However, we were able to find a file with information we could use and imported the data into a database we created in MongoDB. That database was then deployed to Heroku for us to use as our API. 
 ![MongoDB ScreenShot](https://user-images.githubusercontent.com/101548840/169458027-8b6c62a1-d33c-4189-a3da-0233d72b860d.png)
 
+###Original Data
 https://data.world/timothyrenner/haunted-places/workspace/file?filename=haunted_places.csv
-Original Data
+###Our Heroku API with mported Data from MongoDB
 https://haunted-site-app.herokuapp.com
-Our Heroku API with mported Data from MongoDB
+
 
 ## Components
 ### Nav
@@ -40,10 +41,10 @@ The created review can also be Edited or Deleted
 ![EDIT:DELETE Screenshot](https://user-images.githubusercontent.com/101548840/169465711-fd17927d-e531-4d4f-ba95-cc61e97276d2.png)
 
 ### Carousel 
-The image carousel shows our picked Top 10 Most Haunted! 
+The image carousel shows our picked Top 9 Most Haunted! 
 Clicking on the image will take user to page that will display more information about the location. 
 ![Carousel Screenshot](https://user-images.githubusercontent.com/101548840/169465056-d2171d82-71ed-4dbf-a049-5fe8dc0c8905.png)
-This is a location from out Top 10, this set of locations are the only ones that have images. Our API did not have images and we added some to our database in order to display them on our main page.
+This is a location from out Top 9, this set of locations are the only ones that have images. Our API did not have images and we added some to our database in order to display them on our main page.
 ![Carousel Selected Screenshot](https://user-images.githubusercontent.com/101548840/169467011-46fa4bdd-9ebe-4b20-a0f5-270d03eac976.png)
 
 ## Check Our App
