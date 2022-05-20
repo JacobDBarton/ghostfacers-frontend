@@ -15,7 +15,6 @@ function Footer(props){
                 <a href="https://github.com/gigi-coding"><FaGithub/></a>
                 </div>
             </div>
-            <div>||</div>
             <div className='creators'>
                 <div>
                 Jacob Barton
