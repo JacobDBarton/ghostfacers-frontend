@@ -1,19 +1,20 @@
-import './styles.css'
-import { Link } from 'react-router-dom'
+import './styles.css';
+import { FaGithubSquare } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 function Footer(props){
     return (
         <div className='footer'>
             <div className='gigi'>
-                <p>Brigitte Quintero</p>
-                <a href="https://www.linkedin.com/in/brigitte-quintero/"></a>
-                <a href="https://github.com/gigi-coding"></a>
+                Brigitte Quintero
+                <a href="https://www.linkedin.com/in/brigitte-quintero/"><FaLinkedin/></a>
+                <a href="https://github.com/gigi-coding"><FaGithub/></a>
             </div>
             <div className='jacob'>
-                <p>Jacob Barton I WANT THESE LINKS TO WORK!</p>
-                <Link to={'"https://www.linkedin.com/in/jacob-barton/"'}/>
-                {/* <a href="https://www.linkedin.com/in/jacob-barton/"></a> */}
-                {/* <a href="https://github.com/JacobDBarton"></a> */}
+                Jacob Barton
+                <a href="https://www.linkedin.com/in/jacob-barton/"><FaLinkedin/></a>
+                <a href="https://github.com/JacobDBarton"><FaGithub/></a>
             </div>
         </div>
     )
